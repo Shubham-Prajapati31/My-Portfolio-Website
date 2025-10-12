@@ -11,7 +11,7 @@ export default function Hero() {
           <h1 className="text-gray-700 text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
             Hello, I’m{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Shubham Prajapati !!
+              Shubham Prajapati !
             </span>
           </h1>
 
