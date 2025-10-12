@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-5 text-3xl justify-center">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+          <a href="https://github.com/Shubham-Prajapati31" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
             <FaGithub />
           </a>
           <a href="https://linkedin.com/in/shubham-prajapati-a76810353" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
