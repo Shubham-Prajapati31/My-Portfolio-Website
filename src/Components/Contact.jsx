@@ -283,7 +283,7 @@ export default function Contact() {
                     Email
                   </h4>
                   <p className="text-gray-800 font-medium">
-                    Demo@gmail.com
+                   shubham20053108@gmail.com
                   </p>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export default function Contact() {
                   <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                     Phone
                   </h4>
-                  <p className="text-gray-800 font-medium">+91 73#######</p>
+                  <p className="text-gray-800 font-medium">+91 7304398854</p>
                 </div>
               </div>
 
