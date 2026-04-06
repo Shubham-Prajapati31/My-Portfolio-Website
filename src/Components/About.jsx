@@ -1,100 +1,142 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaLaptopCode, FaProjectDiagram, FaSmile, FaCertificate, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function About() {
+  const stats = [
+    {
+      icon: <FaLaptopCode className="text-blue-600 text-2xl group-hover:text-white transition-colors duration-300" />,
+      bg: "bg-blue-50 group-hover:bg-blue-600",
+      textHover: "group-hover:text-blue-600",
+      value: "3",
+      label: "Years Experience"
+    },
+    {
+      icon: <FaProjectDiagram className="text-purple-600 text-2xl group-hover:text-white transition-colors duration-300" />,
+      bg: "bg-purple-50 group-hover:bg-purple-600",
+      textHover: "group-hover:text-purple-600",
+      value: "15",
+      label: "Projects Done"
+    },
+    {
+      icon: <FaSmile className="text-pink-500 text-2xl group-hover:text-white transition-colors duration-300" />,
+      bg: "bg-pink-50 group-hover:bg-pink-500",
+      textHover: "group-hover:text-pink-500",
+      value: "17",
+      label: "Happy Clients"
+    },
+    {
+      icon: <FaCertificate className="text-indigo-600 text-2xl group-hover:text-white transition-colors duration-300" />,
+      bg: "bg-indigo-50 group-hover:bg-indigo-600",
+      textHover: "group-hover:text-indigo-600",
+      value: "7+",
+      label: "Certifications"
+    }
+  ];
+
   return (
-    <section
-      id="about"
-      className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white text-gray-900"
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+    <section id="about" className="py-16 md:py-20 px-6 bg-gray-50 relative overflow-hidden">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-10"
         >
-          About Me
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Me</span>
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mt-4 rounded-full"></div>
+        </motion.div>
 
-        {/* Intro Section */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-lg md:text-xl leading-relaxed text-center max-w-3xl mx-auto mb-12"
-        >
-          Hello! I'm{" "}
-          <span className="font-semibold text-blue-600">Shubham Prajapati</span>, 
-          a passionate and self-motivated{" "}
-          <span className="font-semibold">Software Developer</span> and 
-          Computer Science student from Mumbai University. I enjoy building 
-          web applications, exploring Artificial Intelligence, and creating 
-          digital experiences that blend creativity and technology.
-        </motion.p>
+        {/* Bento Grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5">
+          
+          {/* Card 1: Profile Image - LEFT SIDE (Spans 1 col now for smaller size) */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="md:col-span-1 bg-white rounded-[1.8rem] overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 relative group min-h-[300px] aspect-[4/5] object-cover"
+          >
+            <img 
+              src="/MY Profile Pic.png" 
+              alt="Shubham Prajapati" 
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            {/* Gradient Overlay for Text Visibility */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            
+            <div className="absolute bottom-4 left-4 text-white flex items-center gap-2">
+               <div className="p-2 bg-blue-500/30 backdrop-blur-md rounded-full border border-white/10">
+                 <FaMapMarkerAlt className="text-blue-100 text-sm" />
+               </div>
+               <div>
+                  <p className="font-semibold tracking-wide text-white text-sm">Mumbai</p>
+               </div>
+            </div>
+          </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              title: "💻 Skills & Tools",
-              content:
-                "Proficient in HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Python, and Java. Experienced with VS Code, Figma, and Canva.",
-            },
-            {
-              title: "📜 Certifications",
-              content:
-                "Python & Artificial Intelligence from DevTown, Cloud Computing & DevOps from ExcelR. Aavishkar Mumbai University competition presenter.",
-            },
+          {/* Card 2: Bio - RIGHT SIDE (Spans 3 cols to make image relatively smaller) */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="md:col-span-3 bg-white rounded-[1.8rem] p-6 md:p-8 shadow-sm hover:shadow-xl transition-shadow duration-500 border border-gray-100 flex flex-col justify-center relative overflow-hidden group min-h-[300px]"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-60 group-hover:scale-150 transition-transform duration-1000 ease-out"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-60 group-hover:scale-150 transition-transform duration-1000 ease-out delay-100"></div>
+            
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 z-10 leading-snug">
+              Turning ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">reality</span>.
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-4 z-10 text-[0.95rem] md:text-base font-medium">
+              I'm Shubham Prajapati, a Computer Science student at Mumbai University who thrives on building scalable, user-friendly web applications. 
+            </p>
+            <p className="text-gray-500 leading-relaxed z-10 text-[0.95rem] md:text-base pb-6">
+              I specialize in modern frameworks like <strong className="text-blue-600">React</strong> and <strong className="text-purple-600">Next.js</strong>. With a keen eye for design and a love for clean code, I blend creativity with technical expertise to deliver top-notch digital solutions.
+            </p>
+            
+            <div className="mt-auto z-10">
+              <motion.a 
+                href="#contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center px-6 py-2.5 bg-gray-900 hover:bg-black text-white font-medium text-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Contact Me
+              </motion.a>
+            </div>
+          </motion.div>
 
-            {
-              title: "🚀 Projects",
-              content:
-                "Built AI-Powered Time Table Scheduler, College Website, Python Games, and an AI Study Portal with chatbot and quizzes.",
-            },
-            // {
-            //   title: "🧠 Internship",
-            //   content:
-            //     "Jr. Software Developer Intern at Nexcore Alliance, Mumbai (Apr–Jul 2025). Worked on full-stack features and modern frameworks.",
-            // },
-          ].map((card, index) => (
+          {/* Bottom Row Stats (4 items, each spans 1 column) */}
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-              className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
+              className="md:col-span-1 bg-white rounded-[1.8rem] p-5 md:p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col items-center justify-center text-center group min-h-[160px]"
             >
-              <h3 className="text-2xl font-semibold mb-3 text-blue-600">
-                {card.title}
-              </h3>
-              <p className="text-gray-700">{card.content}</p>
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-3 ${stat.bg} group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-sm border border-gray-50`}>
+                 {stat.icon}
+              </div>
+              <h4 className={`text-3xl font-black text-gray-900 mb-1 tracking-tight ${stat.textHover} transition-colors duration-300`}>
+                {stat.value}
+              </h4>
+              <p className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest leading-snug">
+                {stat.label.split(' ').map((word, i) => (
+                   <span key={i} className="block">{word}</span>
+                ))}
+              </p>
             </motion.div>
           ))}
-        </div>
 
-      
-        {/* Final Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center"
-        >
-          <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-gray-800">
-            I’m driven by curiosity and a constant desire to learn. 
-            Whether developing apps, solving complex problems, or designing visuals, 
-            I aim to make technology more engaging and meaningful.
-          </p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            className="inline-block mt-8 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Let’s Connect 🚀
-          </motion.a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -8,14 +8,14 @@ export default function Footer() {
           © {new Date().getFullYear()} <span className=" text-center  text-sm font-semibold  text-blue-600">Shubham Prajapati</span>. All rights reserved.
         </p>
 
-        <div className="flex gap-5 text-3xl justify-center">
-          <a href="https://github.com/Shubham-Prajapati31" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+        <div className="flex gap-5 text-3xl justify-center mt-4 md:mt-0">
+          <a href="https://github.com/Shubham-Prajapati31" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/shubham-prajapati-a76810353" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+          <a href="https://www.linkedin.com/in/shubham-prajapati31/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
             <FaLinkedin />
           </a>
-          <a href="mailto:youremail@example.com" className="hover:text-blue-600 transition">
+          <a href="mailto:shubham20053108@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
             <FaEnvelope />
           </a>
         </div>
