@@ -1,11 +1,6 @@
-import { FaJsSquare } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+"use client";
+import { FaJsSquare, FaReact, FaNodeJs, FaHtml5, FaGithub } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiMongodb } from "react-icons/si";
 
 export default function Skills() {
   const skills = [
