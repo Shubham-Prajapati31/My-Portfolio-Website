@@ -3,6 +3,23 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
+
+    {
+      title: "AI-powered Study Platform",
+      desc: "Personalized learning Platform with EduMentor chatbot, quizzes, and more features.",
+      tech: "React • WebMatrix • AI",
+      live: "https://ai-study-platform-ty.vercel.app/",
+      github: "#",
+      img: "/project4.png",
+    },
+    {
+      title: "E-commerce Platform",
+      desc: "UrbanPick with cart functionality and modern UI.",
+      tech: "React • TailwindCSS • Next.js",
+      live: "https://urban-pick-webmatrix.vercel.app/",
+      github: "#",
+      img: "/project5.png",
+    },
     {
       title: "College Website",
       desc: "Animated and responsive website for college with multi-page support.",
@@ -27,22 +44,7 @@ export default function Projects() {
       github: "#",
       img: "/project3.png",
     },
-    {
-      title: "AI-powered Study Platform",
-      desc: "Personalized learning Platform with EduMentor chatbot, quizzes, and more features.",
-      tech: "React • WebMatrix • AI",
-      live: "https://ai-study-platform-ty.vercel.app/",
-      github: "#",
-      img: "/project4.png",
-    },
-    {
-      title: "E-commerce Platform",
-      desc: "UrbanPick with cart functionality and modern UI.",
-      tech: "React • TailwindCSS • Next.js",
-      live: "https://urban-pick-webmatrix.vercel.app/",
-      github: "#",
-      img: "/project5.png",
-    },
+    
   ];
 
   const containerVariants = {
