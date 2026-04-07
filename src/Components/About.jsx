@@ -59,7 +59,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="md:col-span-1 bg-white rounded-[1.8rem] overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 relative group min-h-[300px] aspect-[4/5] object-cover"
+            className="md:col-span-1 w-[220px] place-self-center md:w-full md:place-self-auto bg-white rounded-[1.8rem] overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 relative group min-h-[280px] md:min-h-[300px] aspect-[4/5] object-cover"
           >
             <img 
               src="/MY Profile Pic.png" 
@@ -112,29 +112,31 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Bottom Row Stats (4 items, each spans 1 column) */}
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
-              className="md:col-span-1 bg-white rounded-[1.8rem] p-5 md:p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col items-center justify-center text-center group min-h-[160px]"
-            >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-3 ${stat.bg} group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-sm border border-gray-50`}>
-                 {stat.icon}
-              </div>
-              <h4 className={`text-3xl font-black text-gray-900 mb-1 tracking-tight ${stat.textHover} transition-colors duration-300`}>
-                {stat.value}
-              </h4>
-              <p className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest leading-snug">
-                {stat.label.split(' ').map((word, i) => (
-                   <span key={i} className="block">{word}</span>
-                ))}
-              </p>
-            </motion.div>
-          ))}
+          {/* Bottom Row Stats (4 items, sub-grid to be mobile friendly) */}
+          <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
+                className="bg-white rounded-[1.8rem] p-4 md:p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col items-center justify-center text-center group min-h-[140px] md:min-h-[160px]"
+              >
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-2 md:mb-3 ${stat.bg} group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300 shadow-sm border border-gray-50`}>
+                   {stat.icon}
+                </div>
+                <h4 className={`text-2xl md:text-3xl font-black text-gray-900 mb-1 tracking-tight ${stat.textHover} transition-colors duration-300`}>
+                  {stat.value}
+                </h4>
+                <p className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest leading-snug">
+                  {stat.label.split(' ').map((word, i) => (
+                     <span key={i} className="block">{word}</span>
+                  ))}
+                </p>
+              </motion.div>
+            ))}
+          </div>
 
         </div>
       </div>
