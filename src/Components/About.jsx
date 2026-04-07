@@ -94,7 +94,7 @@ export default function About() {
               Turning ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">reality</span>.
             </h3>
             <p className="text-gray-600 leading-relaxed mb-4 z-10 text-[0.95rem] md:text-base font-medium">
-              I'm Shubham Prajapati, a Computer Science student at Mumbai University who thrives on building scalable, user-friendly web applications. 
+              I&apos;m Shubham Prajapati, a Computer Science student at Mumbai University who thrives on building scalable, user-friendly web applications. 
             </p>
             <p className="text-gray-500 leading-relaxed z-10 text-[0.95rem] md:text-base pb-6">
               I specialize in modern frameworks like <strong className="text-blue-600">React</strong> and <strong className="text-purple-600">Next.js</strong>. With a keen eye for design and a love for clean code, I blend creativity with technical expertise to deliver top-notch digital solutions.

@@ -70,11 +70,10 @@ export default function Contact() {
                 className="absolute inset-0 flex justify-center items-center z-50"
               >
                 <div
-                  className={`backdrop-blur-md border px-8 py-6 rounded-2xl shadow-2xl text-center ${
-                    status === "success"
+                  className={`backdrop-blur-md border px-8 py-6 rounded-2xl shadow-2xl text-center ${status === "success"
                       ? "bg-gradient-to-r from-green-50/60 to-green-100/60 border-green-400"
                       : "bg-gradient-to-r from-red-50/60 to-red-100/60 border-red-400"
-                  }`}
+                    }`}
                 >
                   <div className="flex flex-col items-center space-y-3">
                     <motion.div
@@ -113,9 +112,8 @@ export default function Contact() {
                       )}
                     </motion.div>
                     <p
-                      className={`text-lg font-semibold ${
-                        status === "success" ? "text-green-700" : "text-red-700"
-                      }`}
+                      className={`text-lg font-semibold ${status === "success" ? "text-green-700" : "text-red-700"
+                        }`}
                     >
                       {status === "success"
                         ? "Message Sent Successfully!"
@@ -205,11 +203,10 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-md hover:shadow-lg mt-2 flex items-center justify-center ${
-                  loading
+                className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-md hover:shadow-lg mt-2 flex items-center justify-center ${loading
                     ? "opacity-70 cursor-not-allowed"
                     : "hover:from-blue-700 hover:to-purple-700"
-                }`}
+                  }`}
               >
                 {loading ? (
                   <svg
@@ -283,7 +280,7 @@ export default function Contact() {
                     Email
                   </h4>
                   <p className="text-gray-800 font-medium">
-                   shubham20053108@gmail.com
+                    shubham20053108@gmail.com
                   </p>
                 </div>
               </div>
@@ -309,7 +306,7 @@ export default function Contact() {
                   <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                     Phone
                   </h4>
-                  <p className="text-gray-800 font-medium">+91 7304398854</p>
+                  <p className="text-gray-800 font-medium">+91 730#######</p>
                 </div>
               </div>
 
