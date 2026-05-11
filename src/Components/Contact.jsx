@@ -50,7 +50,7 @@ export default function Contact() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
             Contact Me
           </h2>
           <p className="text-gray-600 text-lg">
@@ -129,7 +129,7 @@ export default function Contact() {
           <div className="md:w-2/3 relative">
             <form
               onSubmit={handleSubmit}
-              className="bg-white shadow-xl border border-gray-200 p-8 rounded-3xl flex flex-col gap-6 h-full relative z-10"
+              className="bg-white shadow-xl border border-gray-200 p-6 md:p-8 rounded-3xl flex flex-col gap-6 h-full relative z-10"
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -251,8 +251,8 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Personal Information */}
-          <div className="md:w-1/3 bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-3xl shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+          <div className="md:w-1/3 bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-800 flex items-center">
               <span className="w-6 h-6 bg-blue-500 rounded-full mr-2"></span>
               Personal Info
             </h3>

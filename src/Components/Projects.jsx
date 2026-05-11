@@ -113,11 +113,11 @@ export default function Projects() {
               key={index}
               className="block bg-white border border-gray-100 shadow-lg rounded-2xl overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col cursor-pointer"
             >
-              <div className="relative overflow-hidden h-56">
+              <div className="relative overflow-hidden aspect-video sm:h-56 bg-gray-50">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
