@@ -5,23 +5,43 @@ export default function Projects() {
   const projects = [
 
     {
-      title: "AI-powered Study Platform",
+      title: "EduMentor (AI-powered Study Platform)",
       desc: "Personalized learning Platform with EduMentor chatbot, quizzes, and more features.",
-      tech: "React • WebMatrix • AI",
+      tech: "MERN Stack  | React • MongoDB • Express • Node.js • AI",
       live: "https://ai-study-platform-ty.vercel.app/",
       github: "#",
       img: "/project4.png",
     },
     {
-      title: "E-commerce Platform",
+      title: "UrbanPick (E-commerce Platform)",
       desc: "UrbanPick with cart functionality and modern UI.",
-      tech: "React • TailwindCSS • Next.js",
+      tech: " MERN Stack React • TailwindCSS • Next.js",
       live: "https://urban-pick-webmatrix.vercel.app/",
       github: "#",
       img: "/project5.png",
     },
+
     {
-      title: "College Website",
+      title: "MedSphere (Clinic Management System) ",
+      desc: "A modern clinic management system with appointment scheduling, doctor profiles, and patient records.",
+      tech: " MERN Stack | React • TailwindCSS • Node.js • Firebase",
+      live: "https://med-sphere-clinic.vercel.app/",
+      github: "#",
+      img: "/project6.png",
+    },
+
+    {
+      title: "WebMatrix Codex",
+      desc: "Official startup website for Web Matrix Solutions, designed to present AI-powered development services, modern web solutions, and futuristic digital experiences.",
+      tech: "MERN Stack | Next.js • Tailwind CSS • TypeScript • Framer Motion",
+      live: "https://webmatrix-codex.vercel.app/",
+      github: "#",
+      img: "/project7.png",
+    },
+
+
+    {
+      title: "SPDC (College Website)",
       desc: "Animated and responsive website for college with multi-page support.",
       tech: "HTML • CSS • JavaScript",
       live: "https://spdccollege2.netlify.app/",
@@ -37,14 +57,13 @@ export default function Projects() {
       img: "/project2.png",
     },
     {
-      title: "Pygame Shooting Game",
+      title: "Space Shooter (Pygame Shooting Game)",
       desc: "A fun arcade-style shooting game built using Pygame library.",
       tech: "Python • Pygame",
       live: "https://drive.google.com/file/d/10CcdvmCYLmDkhUJjX3CpaHrdXMKFWMlb/view?usp=sharing",
       github: "#",
       img: "/project3.png",
     },
-    
   ];
 
   const containerVariants = {
@@ -66,9 +85,9 @@ export default function Projects() {
     <section id="Projects" className="bg-white text-gray-800 py-24 px-6 relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
-      
+
       <div className="max-w-7xl xl:max-w-[1400px] mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -78,7 +97,7 @@ export default function Projects() {
           Featured Projects
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -86,19 +105,19 @@ export default function Projects() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {projects.map((project, index) => (
-            <motion.a 
+            <motion.a
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
-              key={index} 
+              key={index}
               className="block bg-white border border-gray-100 shadow-lg rounded-2xl overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col cursor-pointer"
             >
-              <div className="relative overflow-hidden h-56">
-                <img 
-                  src={project.img} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              <div className="relative overflow-hidden aspect-video sm:h-56 bg-gray-50">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-blue-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -111,12 +130,12 @@ export default function Projects() {
                   <span className="text-blue-600 font-semibold text-sm bg-blue-50 px-3 py-1 rounded-full">{project.tech}</span>
                   <div className="flex gap-4">
                     {project.github !== "#" && (
-                      <div 
+                      <div
                         onClick={(e) => {
                           e.preventDefault();
                           window.open(project.github, "_blank");
-                        }} 
-                        className="text-gray-500 hover:text-gray-900 transition-colors z-20 relative cursor-pointer" 
+                        }}
+                        className="text-gray-500 hover:text-gray-900 transition-colors z-20 relative cursor-pointer"
                         title="GitHub"
                       >
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
